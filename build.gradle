@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'me.zort.housing.api.core'
+group = 'me.zort.housing.api'
 version = project.findProperty('version') ?: '1.0-SNAPSHOT'
 
 repositories {
