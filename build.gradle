@@ -1,0 +1,77 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'me.zort.housing.api.core'
+version = project.findProperty('version') ?: '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo.papermc.io/repository/maven-public/'
+        content {
+            includeGroupByRegex 'io\\.papermc(\\..*)?'
+            includeGroupByRegex 'net\\.md-5(\\..*)?'
+        }
+    }
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+    maven {
+        url = 'https://jitpack.io'
+        content { includeGroupByRegex 'com\\.github\\..*' }
+    }
+    // Home of item-nbt-api, which Containr pulls in.
+    maven {
+        url = 'https://repo.codemc.io/repository/maven-releases/'
+        content { includeGroup 'de.tr7zw' }
+    }
+    maven {
+        url = 'https://repo.codemc.io/repository/maven-snapshots/'
+        content { includeGroup 'de.tr7zw' }
+    }
+    maven {
+        url = 'https://repo.codemc.org/repository/maven-public/'
+        content { includeGroup 'de.tr7zw' }
+    }
+    // Serves brigadier, which :proxy needs and which is missing elsewhere.
+    maven {
+        url = 'https://maven.elmakers.com/repository/'
+        content { includeGroupByRegex 'net\\.md-5(\\..*)?' }
+    }
+}
+
+dependencies {
+    compileOnly libs.jetbrains.annotations
+    compileOnly libs.lombok
+    compileOnly libs.paper.api
+    compileOnly libs.containr
+    annotationProcessor libs.lombok
+}
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = uri("https://maven.pkg.github.com/${System.getenv('GITHUB_REPOSITORY') ?: 'USER/REPO'}")
+            credentials {
+                username = System.getenv('GITHUB_ACTOR') ?: project.findProperty('gpr.user')
+                password = System.getenv('GITHUB_TOKEN') ?: project.findProperty('gpr.key')
+            }
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
