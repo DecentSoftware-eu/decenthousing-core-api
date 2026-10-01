@@ -65,6 +65,6 @@ public interface HousingApi {
      * @return The current version of the Housing Core API.
      */
     static ApiVersion getApiVersion() {
-        return new ApiVersion(1);
+        return new ApiVersion(2);
     }
 }
