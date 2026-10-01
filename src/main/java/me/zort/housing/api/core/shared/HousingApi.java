@@ -27,6 +27,8 @@ public interface HousingApi {
 
     ApiMenuElementFactory getMenuElementFactory();
 
+    ApiPaywallFactory getPaywallFactory();
+
     ApiEconomyService getEconomyService();
 
     ApiMenuUtil getMenuUtil();
