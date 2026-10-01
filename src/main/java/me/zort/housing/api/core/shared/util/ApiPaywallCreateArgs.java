@@ -3,6 +3,7 @@ package me.zort.housing.api.core.shared.util;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
+import org.bukkit.inventory.ItemStack;
 
 @Getter
 @Builder
@@ -11,5 +12,5 @@ public class ApiPaywallCreateArgs {
     private ApiPaywallController controller;
     @NonNull
     private String titleOnBuyMenu;
-    private String itemOnBuyMenu;
+    private ItemStack itemOnBuyMenu;
 }
