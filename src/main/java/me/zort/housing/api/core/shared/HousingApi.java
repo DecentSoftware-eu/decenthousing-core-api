@@ -3,6 +3,7 @@ package me.zort.housing.api.core.shared;
 import me.zort.housing.api.core.ApiVersion;
 import me.zort.housing.api.core.HousingApiProvider;
 import me.zort.housing.api.core.plot.HousingApiPlot;
+import me.zort.housing.api.core.shared.command.dynamic.ApiDynamicCommandRegistry;
 import me.zort.housing.api.core.shared.economy.ApiEconomyService;
 import me.zort.housing.api.core.shared.economy.offer.ApiOfferSerializationService;
 import me.zort.housing.api.core.shared.lang.ApiCoreMessageFactory;
@@ -38,6 +39,8 @@ public interface HousingApi {
     ApiColorsUtil getColorsUtil();
 
     ApiOfferSerializationService getOfferSerializationService();
+
+    ApiDynamicCommandRegistry getDynamicCommandRegistry();
 
     /**
      * Retrieves the HousingApi instance from the HousingApiProvider.
