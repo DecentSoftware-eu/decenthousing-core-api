@@ -2,8 +2,8 @@
 
 ## Version catalog
 
-| **Version** | **Least implementing version** | **Additions**                          | Status   |
-|-------------|--------------------------------|----------------------------------------|----------|
-| 1           | /                              | Initial                                | RELEASED |
-| 2           | /                              | Paywall                                | RELEASED |
-| 3           | /                              | Holograms, Announcer, Dynamic commands | DEV      |
+| **Version** | **Least implementing version** | **Additions**                                  | Status   |
+|-------------|--------------------------------|------------------------------------------------|----------|
+| 1           | /                              | Initial                                        | RELEASED |
+| 2           | /                              | Paywall                                        | RELEASED |
+| 3           | /                              | Holograms, Announcer, Dynamic commands, Events | DEV      |
