@@ -5,6 +5,7 @@ import me.zort.housing.api.core.shared.menu.component.gui.confirm.ApiConfirmMenu
 import me.zort.housing.api.core.shared.menu.component.gui.economypicker.ApiEconomyPickerMenuArgs;
 import me.zort.housing.api.core.shared.menu.component.gui.input.ApiInputMenuArgs;
 import me.zort.housing.api.core.shared.menu.component.gui.iteminput.ApiItemInputMenuArgs;
+import me.zort.housing.api.core.shared.menu.component.gui.optionselector.ApiOptionSelectorMenuArgs;
 
 public interface ApiMenuFactory {
 
@@ -19,4 +20,6 @@ public interface ApiMenuFactory {
     ApiMenu createEconomyPickerMenu(ApiEconomyPickerMenuArgs args);
 
     ApiMenu createAmountPickerMenu(ApiAmountPickerMenuArgs args);
+
+    <T> ApiMenu createOptionSelector(ApiOptionSelectorMenuArgs<T> args);
 }
