@@ -6,8 +6,6 @@ public interface ApiDynamicCommandRegistry {
 
     void registerCommand(ApiDynamicCommand command);
 
-    void unregisterCommand(ApiDynamicCommand command);
-
     void unregisterCommand(String name);
 
     @Nullable
