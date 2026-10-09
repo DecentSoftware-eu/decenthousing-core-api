@@ -4,6 +4,5 @@ import me.zort.housing.api.core.shared.user.ApiUser;
 
 public interface ApiDynamicCommandHandler {
 
-    default void handleCommand(ApiUser user, String cmd, String[] args) {
-    }
+    void handleCommand(ApiUser user, String cmd, String[] args);
 }
