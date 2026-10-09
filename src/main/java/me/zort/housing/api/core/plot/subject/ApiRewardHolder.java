@@ -10,6 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public interface ApiRewardHolder {
 
@@ -27,6 +28,8 @@ public interface ApiRewardHolder {
      * @throws ApiGiveCheckException if the user cannot receive rewards from this holder
      */
     void checkCanGiveRewards(ApiPlotUser user);
+
+    CompletableFuture<Void> buyWithOffer(ApiPlotUser user);
 
     void edit(ApiPlotUser editor, @Nullable ApiMenu parent);
 
