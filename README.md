@@ -6,4 +6,4 @@
 |-------------|--------------------------------|----------------------------------------------------------|----------|
 | 1           | /                              | Initial                                                  | RELEASED |
 | 2           | /                              | Paywall                                                  | RELEASED |
-| 3           | /                              | Holograms, Announcer, Dynamic commands, Commands, Events | DEV      |
+| 3           | /                              | Holograms, Announcer, Dynamic commands, Commands, Events | RELEASED |
