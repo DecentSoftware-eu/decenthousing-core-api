@@ -1,7 +1,9 @@
 package me.zort.housing.api.core.plot;
 
 import me.zort.housing.api.core.plot.access.ApiPermissionManager;
+import me.zort.housing.api.core.plot.announcer.ApiAnnouncer;
 import me.zort.housing.api.core.plot.bank.ApiBank;
+import me.zort.housing.api.core.plot.hologram.ApiHologramService;
 import me.zort.housing.api.core.plot.item.lock.ApiItemLockService;
 import me.zort.housing.api.core.plot.menu.ApiPlotMenuElementFactory;
 import me.zort.housing.api.core.plot.menu.ApiPlotMenuFactory;
@@ -39,4 +41,8 @@ public interface HousingApiPlot extends HousingApi {
     ApiRewardFactory getRewardFactory();
 
     ApiConditionalFactory getConditionalFactory();
+
+    ApiHologramService getHologramService();
+
+    ApiAnnouncer getAnnouncer();
 }

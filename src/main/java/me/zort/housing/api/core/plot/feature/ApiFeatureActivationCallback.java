@@ -5,6 +5,8 @@ import me.zort.housing.api.core.plot.access.ApiPermissionEntry;
 import me.zort.housing.api.core.plot.item.lock.ApiLockableItem;
 import me.zort.housing.api.core.plot.menu.PlotMenuType;
 import me.zort.housing.api.core.plot.npc.ApiNpc;
+import me.zort.housing.api.core.shared.command.ApiCommandRegistration;
+import me.zort.housing.api.core.shared.command.dynamic.ApiDynamicCommand;
 import me.zort.housing.api.core.shared.util.ApiConfigItemBuilder;
 import org.bukkit.event.Listener;
 import org.jetbrains.annotations.Nullable;
@@ -20,6 +22,10 @@ public interface ApiFeatureActivationCallback {
     void registerPermission(ApiPermissionEntry... entries);
 
     void registerListener(Listener listener);
+
+    void registerDynamicCommand(ApiDynamicCommand... command);
+
+    void registerCommand(ApiCommandRegistration... registration);
 
     void spawnNpc(ApiNpc npc);
 
