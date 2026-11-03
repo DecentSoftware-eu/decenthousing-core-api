@@ -9,6 +9,7 @@ import me.zort.housing.api.core.shared.economy.offer.ApiOfferSerializationServic
 import me.zort.housing.api.core.shared.lang.ApiCoreMessageFactory;
 import me.zort.housing.api.core.shared.menu.ApiMenuElementFactory;
 import me.zort.housing.api.core.shared.menu.ApiMenuFactory;
+import me.zort.housing.api.core.shared.resources.ApiGlobalConfigProvider;
 import me.zort.housing.api.core.shared.user.ApiUserManager;
 import me.zort.housing.api.core.shared.util.*;
 
@@ -41,6 +42,8 @@ public interface HousingApi {
     ApiOfferSerializationService getOfferSerializationService();
 
     ApiDynamicCommandRegistry getDynamicCommandRegistry();
+
+    ApiGlobalConfigProvider getGlobalConfigProvider();
 
     /**
      * Retrieves the HousingApi instance from the HousingApiProvider.
